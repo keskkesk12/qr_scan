@@ -28,7 +28,7 @@
   const currentDate = new Date();
 
   const messageElement = document.getElementById("ticketStatus");
-  if (currentDate >= targetDate) {
+  if (currentDate <= targetDate) {
     messageElement.textContent = "Ticket accepted";
   } else {
     messageElement.textContent = "Ticket not valid yet";
