@@ -24,14 +24,18 @@
 <div class="message" id="ticketStatus"></div>
 
 <script>
-  const targetDate = new Date("2024-11-02T17:00:00"); // Target date and time
+  const targetDate = new Date("2024-11-02T17:00:00"); // Accepted time
+  const targetDate2 = new Date("2024-11-02T15:00:00"); // not valid time
   const currentDate = new Date();
 
   const messageElement = document.getElementById("ticketStatus");
   if (currentDate >= targetDate) {
     messageElement.textContent = "Ticket denied";
-  } else {
+  } else if(currentDate >= targetDate2){
     messageElement.textContent = "Ticket not valid yet";
+  }
+  else {
+    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; 
   }
 </script>
 
